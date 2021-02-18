@@ -12,7 +12,7 @@ function App() {
   const submit = () => {
     try {
       setLoading(true);
-      fetch('http://192.168.144.7:8000', {
+      fetch('http://localhost:8000', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
