@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders all buttons', () => {
+  const root = document.createElement("div");
+  ReactDOM.render(<App />, root);
+  
+  const allButtons = root.querySelectorAll('button');
+  expect(allButtons.length).toBe(6);
 });
