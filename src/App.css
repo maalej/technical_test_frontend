@@ -1,38 +1,86 @@
+:root {
+	--charcoal:         #454545;
+	--dim-gray:         #707070;
+	--baby-blue:        #66EAFF;
+	--heather:          #ABB8C3;
+	--pattends-blue:    #e0e5e9;
+	--alice-blue:       #F6F7F9;
+	--white:            #FFFFFF;
+	--bckgnd-hover:     #f3f2fb;
+	--chart-default:		#E2E2E2;
+	--light-gray:				#edeff3;
+	--light-red:				#ec8a8a;
+}
+
 .App {
-  text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: blueviolet;
+	justify-content: space-around;
+	align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.steps-count {
+	font-size: 3rem;
+	color: var(--light-gray);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.directions-container {
+	display: grid;
+	grid-gap: 1em;
+	grid-template-rows: auto;
+	grid-template-columns: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.directions-container button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.6rem;
+	font-size: 3rem;
+	vertical-align: middle;
+	width: 6rem;
+	height: 6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.north {
+	grid-column: 2;
+	grid-row: 1;
+}
+.west {
+	grid-column: 1;
+	grid-row: 2;
+}
+.south {
+	grid-column: 2;
+	grid-row: 3;
+}
+.east {
+	grid-column: 3;
+	grid-row: 2;
+}
+.refresh {
+	font-family: Lucida Sans Unicode;
+	grid-column: 2;
+	grid-row: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit {
+	width: 70%;
+	padding: 1rem 0;
+	font-size: 2rem;
+	border-radius: 0.6rem;
+}
+
+button {
+	transition: transform .2s;
+	cursor: pointer;
+	border: none;
+	background-color: var(--white);
+	color: var(--light-red);
+}
+button:hover {
+	transform: scale(1.1);
 }
